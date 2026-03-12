@@ -1,0 +1,6 @@
+python:A programming language
+algorithm:A step by step procedure to solve a problem
+variable:A container that stores data
+function:A reusable block of code
+life:full of living
+slime:sticky thing
