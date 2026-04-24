@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ quiz.title }}</title>
+</head>
+<body>
+
+    <h1>{{ quiz.title }}</h1>
+    <p>{{ quiz.question }}</p>
+
+    <ul>
+        {% for option in quiz.options %}
+            <li>
+                {{ option }}
+                {% if option == quiz.correct %}
+                    ✅
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
