@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Quiz</title>
+</head>
 <body>
 
 <h1>Math Quiz</h1>
-<p>What is 2 + 2?</p>
 
-<ul>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-</ul>
+<form action="/submit" method="POST">
+
+    <p>{{ quiz.q1.question }}</p>
+    <input type="text" name="q1">
+
+    <p>{{ quiz.q2.question }}</p>
+    <input type="text" name="q2">
+
+    <br><br>
+    <button type="submit">Submit</button>
+
+</form>
 
 </body>
 </html>
