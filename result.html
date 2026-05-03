@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Results</title>
+    <title>Result</title>
 </head>
 <body>
 
-    <h1>📊 Quiz Results</h1>
+    <h2>Your Score: {{ score }}</h2>
 
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Score</th>
-        </tr>
-
-        {% for s in scores %}
-        <tr>
-            <td>{{ s.name }}</td>
-            <td>{{ s.score }}</td>
-        </tr>
-        {% endfor %}
-
-    </table>
-
-    <br>
-
-    <a href="/">🔁 Try Again</a>
+    <a href="/">
+        <button>Go Home</button>
+    </a>
 
 </body>
 </html>

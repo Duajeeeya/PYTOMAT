@@ -5,21 +5,19 @@
 </head>
 <body>
 
-    <h2>👤 {{ name }}, solve this:</h2>
+    <h2>{{ question.question }}</h2>
 
-    <h1>{{ question }}</h1>
-
-    <form action="/submit_quiz" method="POST">
+    <form action="/submit" method="POST">
         
-        <!-- keep student name -->
-        <input type="hidden" name="name" value="{{ name }}">
+        {% for option in question.options %}
+            <input type="radio" name="answer" value="{{ option }}" required>
+            <label>{{ option }}</label><br>
+        {% endfor %}
 
-        <!-- correct answer (hidden) -->
-        <input type="hidden" name="correct" value="{{ answer }}">
+        <!-- hidden correct answer -->
+        <input type="hidden" name="correct" value="{{ question.answer }}">
 
-        <!-- user input -->
-        <input type="number" name="answer" placeholder="Your answer" required>
-
+        <br>
         <button type="submit">Submit</button>
     </form>
 
