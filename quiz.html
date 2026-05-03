@@ -5,20 +5,23 @@
 </head>
 <body>
 
-<h1>Math Quiz</h1>
+    <h2>👤 {{ name }}, solve this:</h2>
 
-<form action="/submit" method="POST">
+    <h1>{{ question }}</h1>
 
-    <p>{{ quiz.q1.question }}</p>
-    <input type="text" name="q1">
+    <form action="/submit_quiz" method="POST">
+        
+        <!-- keep student name -->
+        <input type="hidden" name="name" value="{{ name }}">
 
-    <p>{{ quiz.q2.question }}</p>
-    <input type="text" name="q2">
+        <!-- correct answer (hidden) -->
+        <input type="hidden" name="correct" value="{{ answer }}">
 
-    <br><br>
-    <button type="submit">Submit</button>
+        <!-- user input -->
+        <input type="number" name="answer" placeholder="Your answer" required>
 
-</form>
+        <button type="submit">Submit</button>
+    </form>
 
 </body>
 </html>
