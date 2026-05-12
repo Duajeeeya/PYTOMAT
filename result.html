@@ -7,8 +7,15 @@
 
     <h2>Your Score: {{ score }}</h2>
 
-    <a href="/">
-        <button>Go Home</button>
+    <h3>Explanation:</h3>
+
+    <video width="400" controls>
+        <source src="{{ url_for('media', filename='videos/day16.mp4') }}" type="video/mp4">
+    </video>
+
+    <br><br>
+    <a href="/quiz">
+        <button>Try Again</button>
     </a>
 
 </body>
