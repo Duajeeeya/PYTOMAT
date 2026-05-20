@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mini Learning Platform</title>
+    <title>Interactive Math Learning</title>
 </head>
+
 <body>
 
-    <h1>Welcome to the Quiz App 🎓</h1>
-    <p>Test your math skills!</p>
+    <h1>Interactive Math Learning Demo</h1>
 
-    <a href="/quiz">
-        <button>Start Quiz</button>
-    </a>
+    <h2>Manim Lesson</h2>
+
+    <video width="700" controls>
+        <source src="{{ url_for('static',
+        filename='videos/lesson.mp4') }}"
+        type="video/mp4">
+    </video>
+
+    <h2>Play Game</h2>
+
+    <button onclick="startGame()">
+        Start Pygame
+    </button>
+
+    <script>
+        function startGame() {
+            alert("Run your pygame game separately!");
+        }
+    </script>
 
 </body>
 </html>
